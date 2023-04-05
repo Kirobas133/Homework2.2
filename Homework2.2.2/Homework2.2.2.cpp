@@ -7,7 +7,7 @@ struct Bill {
     double BillBalance;
 };
 
-void BillBalanceChange(Bill changebleBill, double newBalance) {
+void BillBalanceChange(Bill& changebleBill, double newBalance) {
     changebleBill.BillBalance = newBalance;
 }
 
