@@ -1,20 +1,31 @@
-﻿// Homework2.2.2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿
 #include <iostream>
+
+struct Bill {
+    int BillNumber;
+    std::string BillOwner;
+    double BillBalance;
+};
+
+void BillBalanceChange(Bill changebleBill, double newBalance) {
+    changebleBill.BillBalance = newBalance;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::setlocale(LC_ALL, "Russian");
+    Bill newBill;
+    std::cout << "Введите номер счета: ";
+    std::cin >> newBill.BillNumber;
+    std::cout << "Введите имя владельца: ";
+    std::cin >> newBill.BillOwner;
+    std::cout << "Введите баланс: ";
+    std::cin >> newBill.BillBalance;
+    std::cout << "Введите новый баланс: ";
+    int newBalance;
+    std::cin >> newBalance;
+    BillBalanceChange(newBill, newBalance);
+    std::cout << "Ваш счет: " << newBill.BillOwner << ", " << newBill.BillNumber << ", " << newBill.BillBalance;
+
+
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
