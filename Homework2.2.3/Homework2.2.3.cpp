@@ -29,5 +29,5 @@ int main()
     parents->AppartNumb = 244;
     adressout(home);
     adressout(*parents);
-    delete[] parents;
+    delete parents;
 }
